@@ -2126,10 +2126,15 @@ a:hover .instructor-card-two__social__icon {
 }
 .course-card {
   position: relative;
-  padding: 30px 30px 0;
+  padding: 25px 25px 25px;
   border-radius: 20px;
   background-color: var(--eduhive-white, #FFFFFF);
   box-shadow: 0px 4px 60px rgba(30, 21, 75, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .course-card {
@@ -2146,11 +2151,14 @@ a:hover .instructor-card-two__social__icon {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  flex-shrink: 0;
 }
 .course-card__image img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 20px;
+  object-fit: cover;
 }
 .course-card__ratings {
   min-width: 214px;
@@ -2205,6 +2213,11 @@ a:hover .instructor-card-two__social__icon {
   margin: 0;
   font-size: 13px;
   color: var(--eduhive-text, #7B7980);
+}
+.course-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .course-card__content__top {
   margin-bottom: 11px;
@@ -2275,6 +2288,7 @@ a:hover .instructor-card-two__social__icon {
   gap: 10px 30px;
   border-top: 1px solid var(--eduhive-border-color, #DBD8E6);
   border-bottom: 1px solid var(--eduhive-border-color, #DBD8E6);
+  margin-top: auto;
 }
 .course-card__lessons, .course-card__students {
   display: flex;
@@ -2400,6 +2414,9 @@ a:hover .instructor-card-two__social__icon {
 .course-card--two .course-card__content {
   position: relative;
   padding: 30px 30px 69px 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 375px) {
   .course-card--two .course-card__content {
@@ -2477,18 +2494,32 @@ a:hover .instructor-card-two__social__icon {
 }
 
 .courses-one {
-  margin-bottom: -173px;
+  margin-bottom: 0;
   position: relative;
   background-color: var(--eduhive-white, #FFFFFF);
 }
 @media (max-width: 1349px) {
   .courses-one {
-    margin-bottom: -293px;
+    margin-bottom: 0;
   }
 }
 .courses-one__container {
   position: relative;
   z-index: 1;
+}
+.courses-one__container .row {
+  align-items: stretch;
+  justify-content: center;
+}
+.courses-one__container .row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+}
+.courses-one__container .col-lg-6 > .course-card,
+.courses-one__container .col-md-6 > .course-card {
+  width: 100%;
+  max-width: 100%;
 }
 @media (min-width: 1200px) {
   .courses-one__container {
