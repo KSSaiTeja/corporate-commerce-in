@@ -5,8 +5,6 @@ vendor/
 # Build outputs
 dist/
 build/
-*.min.js
-*.min.css
 
 # IDE
 .vscode/
