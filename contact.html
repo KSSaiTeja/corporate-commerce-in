@@ -68,10 +68,6 @@
                             <span>H.No 8-3-318/11/31, Jayaprakash Nagar, Besides Saradhi Studio, Ameerpet, Hyderabad - 500073</span>
                         </li>
                     </ul><!-- /.list-unstyled topbar__info -->
-                    <div class="topbar__social social-links">
-                        <span><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
-                        <span><i class="fab fa-youtube" aria-hidden="true"></i></span>
-                    </div><!-- /.topbar__social social-links -->
                 </div><!-- /.topbar__inner -->
             </div><!-- /.container-fluid -->
         </div><!-- /.topbar -->
@@ -81,7 +77,7 @@
                 <div class="main-header__inner">
                     <div class="main-header__logo logo-retina">
                         <a href="index.html">
-                            <img src="assets/images/logo-dark.png" alt="Corporate Commerce - Industry-Integrated Commerce Education" width="209">
+                            <img src="assets/images/logo-dark.png" alt="Corporate Commerce - Industry-Integrated Commerce Education" width="250">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
@@ -227,22 +223,22 @@
                         </div><!-- /.contact-page__content -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <form class="contact-page__form contact-form-validated form-one" action="inc/sendemail.php">
+                        <form class="contact-page__form form-one" id="contactForm" method="POST">
                             <div class="form-one__group">
                                 <div class="form-one__control form-one__control--full">
-                                    <input type="text" name="name" placeholder="Full Name">
+                                    <input type="text" name="entry.744497518" id="entry.744497518" placeholder="Full Name" required>
                                 </div><!-- /.form-one__control form-one__control--full -->
                                 <div class="form-one__control form-one__control--full">
-                                    <input type="email" name="email" placeholder="Email Address">
+                                    <input type="email" name="entry.858424851" id="entry.858424851" placeholder="Email Address" required>
                                 </div><!-- /.form-one__control form-one__control--full -->
                                 <div class="form-one__control form-one__control--full">
-                                    <input type="tel" name="tel" placeholder="Phone Number">
+                                    <input type="tel" name="entry.673534403" id="entry.673534403" placeholder="Phone Number" required>
                                 </div><!-- /.form-one__control form-one__control--full -->
                                 <div class="form-one__control form-one__control--full">
-                                    <textarea name="message" placeholder="Write Messge. . ."></textarea><!-- /# -->
+                                    <textarea name="entry.1683944584" id="entry.1683944584" placeholder="Write Message. . ." required></textarea><!-- /# -->
                                 </div><!-- /.form-one__control -->
                                 <div class="form-one__control form-one__control--full">
-                                    <button type="submit" class="eduhive-btn">
+                                    <button type="submit" class="eduhive-btn" id="submitBtn">
                                         <span>submit now</span>
                                         <span class="eduhive-btn__icon"><i class="icon-right-up"></i></span>
                                     </button>
@@ -425,27 +421,27 @@
                         <div class="footer-widget footer-widget--gallery">
                             <h2 class="footer-widget__title">Our Gallery</h2><!-- /.footer-widget__title -->
                             <div class="footer-widget__gallery">
-                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                <a href="about.html" class="footer-widget__gallery__link">
                                     <img src="assets/images/gallery/footer-widget-gallery-1.jpg" alt="footer-widget-gallery">
                                     <span class="footer-widget__gallery__icon icon-plus"></span>
                                 </a><!-- /.footer-widget__gallery__link -->
-                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                <a href="about.html" class="footer-widget__gallery__link">
                                     <img src="assets/images/gallery/footer-widget-gallery-2.jpg" alt="footer-widget-gallery">
                                     <span class="footer-widget__gallery__icon icon-plus"></span>
                                 </a><!-- /.footer-widget__gallery__link -->
-                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                <a href="about.html" class="footer-widget__gallery__link">
                                     <img src="assets/images/gallery/footer-widget-gallery-3.jpg" alt="footer-widget-gallery">
                                     <span class="footer-widget__gallery__icon icon-plus"></span>
                                 </a><!-- /.footer-widget__gallery__link -->
-                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                <a href="about.html" class="footer-widget__gallery__link">
                                     <img src="assets/images/gallery/footer-widget-gallery-4.jpg" alt="footer-widget-gallery">
                                     <span class="footer-widget__gallery__icon icon-plus"></span>
                                 </a><!-- /.footer-widget__gallery__link -->
-                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                <a href="about.html" class="footer-widget__gallery__link">
                                     <img src="assets/images/gallery/footer-widget-gallery-5.jpg" alt="footer-widget-gallery">
                                     <span class="footer-widget__gallery__icon icon-plus"></span>
                                 </a><!-- /.footer-widget__gallery__link -->
-                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                <a href="about.html" class="footer-widget__gallery__link">
                                     <img src="assets/images/gallery/footer-widget-gallery-6.jpg" alt="footer-widget-gallery">
                                     <span class="footer-widget__gallery__icon icon-plus"></span>
                                 </a><!-- /.footer-widget__gallery__link -->
@@ -564,6 +560,128 @@
     <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
     <!-- template js -->
     <script src="assets/js/eduhive.js"></script>
+    
+    <!-- Contact Form Google Forms Integration & WhatsApp -->
+    <script>
+        (function() {
+            let isSubmitting = false; // Flag to prevent double submission
+            
+            // Wait for DOM and jQuery to load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof jQuery !== 'undefined') {
+                    jQuery(document).ready(function($) {
+                        const form = $('#contactForm');
+                        const submitBtn = $('#submitBtn');
+                        
+                        if (form.length) {
+                            // Prevent the validation plugin from handling this form
+                            // by removing the class that triggers it
+                            form.removeClass('contact-form-validated');
+                            
+                            // Handle form submission
+                            form.on('submit', function(e) {
+                                e.preventDefault();
+                                e.stopImmediatePropagation();
+                                
+                                // Prevent double submission
+                                if (isSubmitting) {
+                                    return false;
+                                }
+                                
+                                // Get form values
+                                const name = $('#entry\\.744497518').val().trim();
+                                const email = $('#entry\\.858424851').val().trim();
+                                const mobile = $('#entry\\.673534403').val().trim();
+                                const message = $('#entry\\.1683944584').val().trim();
+                                
+                                // Validate form
+                                if (!name || !email || !mobile || !message) {
+                                    alert('Please fill in all required fields.');
+                                    return false;
+                                }
+                                
+                                // Validate email format
+                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                if (!emailRegex.test(email)) {
+                                    alert('Please enter a valid email address.');
+                                    return false;
+                                }
+                                
+                                // Validate and clean mobile number
+                                const cleanMobile = mobile.replace(/\D/g, '');
+                                if (cleanMobile.length < 10) {
+                                    alert('Please enter a valid mobile number (minimum 10 digits).');
+                                    return false;
+                                }
+                                
+                                // Set submitting flag
+                                isSubmitting = true;
+                                
+                                // Disable submit button
+                                submitBtn.prop('disabled', true);
+                                submitBtn.html('<span>Submitting...</span><span class="eduhive-btn__icon"><i class="icon-right-up"></i></span>');
+                                
+                                // Prepare WhatsApp message with professional format
+                                const whatsappMessage = encodeURIComponent(
+                                    `*New Contact Form Submission*\n` +
+                                    `*Corporate Commerce Educational Institutions*\n\n` +
+                                    `*Name:* ${name}\n` +
+                                    `*Email:* ${email}\n` +
+                                    `*Mobile:* ${cleanMobile}\n\n` +
+                                    `*Message:*\n${message}\n\n` +
+                                    `---\n` +
+                                    `_Submitted via Corporate Commerce Website_`
+                                );
+                                
+                                // WhatsApp number (94188 66666 -> 919418866666 with country code)
+                                const whatsappNumber = '919418866666';
+                                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+                                
+                                // Submit to Google Forms using FormData and fetch (prevents double submission)
+                                const formData = new FormData();
+                                formData.append('entry.744497518', name);
+                                formData.append('entry.858424851', email);
+                                formData.append('entry.673534403', cleanMobile);
+                                formData.append('entry.1683944584', message);
+                                
+                                const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeK4nIqqmo1YIBWSKW-FqtJ0xnGE0vEE6_rnC8BhrWHO5J18A/formResponse';
+                                
+                                // Submit to Google Forms (no-cors mode - we can't read response but submission works)
+                                fetch(googleFormUrl, {
+                                    method: 'POST',
+                                    mode: 'no-cors',
+                                    body: formData
+                                }).then(function() {
+                                    // Success - open WhatsApp
+                                    window.open(whatsappUrl, '_blank');
+                                    
+                                    // Show success message
+                                    alert('Thank you! Your message has been submitted successfully. We will get back to you soon.');
+                                    
+                                    // Reset form
+                                    form[0].reset();
+                                    isSubmitting = false;
+                                    submitBtn.prop('disabled', false);
+                                    submitBtn.html('<span>submit now</span><span class="eduhive-btn__icon"><i class="icon-right-up"></i></span>');
+                                }).catch(function(error) {
+                                    // Even if there's an error, still open WhatsApp and show success
+                                    // (Google Forms might still receive the submission)
+                                    window.open(whatsappUrl, '_blank');
+                                    alert('Thank you! Your message has been submitted successfully. We will get back to you soon.');
+                                    form[0].reset();
+                                    isSubmitting = false;
+                                    submitBtn.prop('disabled', false);
+                                    submitBtn.html('<span>submit now</span><span class="eduhive-btn__icon"><i class="icon-right-up"></i></span>');
+                                });
+                                
+                                return false; // Prevent form from submitting normally
+                            });
+                        }
+                    });
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
