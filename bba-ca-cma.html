@@ -864,6 +864,44 @@
     <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
     <!-- template js -->
     <script src="assets/js/eduhive.js"></script>
+    
+    <!-- Preloader Fallback - Ensures preloader hides even if window.load doesn't fire -->
+    <script>
+        (function() {
+            function hidePreloader() {
+                const preloader = document.querySelector('.preloader');
+                if (preloader) {
+                    preloader.classList.add('loaded');
+                    setTimeout(function() {
+                        preloader.style.display = 'none';
+                        preloader.style.opacity = '0';
+                        preloader.style.visibility = 'hidden';
+                    }, 500);
+                }
+            }
+            
+            // Try to hide on DOMContentLoaded (faster)
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Set a maximum timeout of 3 seconds
+                    setTimeout(hidePreloader, 3000);
+                });
+            } else {
+                // DOM already loaded, set timeout immediately
+                setTimeout(hidePreloader, 3000);
+            }
+            
+            // Also try on window load (original method)
+            if (window.addEventListener) {
+                window.addEventListener('load', hidePreloader);
+            } else if (window.attachEvent) {
+                window.attachEvent('onload', hidePreloader);
+            }
+            
+            // Ultimate fallback - hide after 5 seconds no matter what
+            setTimeout(hidePreloader, 5000);
+        })();
+    </script>
 </body>
 
 </html>
