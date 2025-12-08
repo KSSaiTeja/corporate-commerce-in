@@ -2152,6 +2152,7 @@ a:hover .instructor-card-two__social__icon {
   overflow: hidden;
   border-radius: 20px;
   flex-shrink: 0;
+  display: none;
 }
 .course-card__image img {
   width: 100%;
@@ -2218,6 +2219,7 @@ a:hover .instructor-card-two__social__icon {
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .course-card__content__top {
   margin-bottom: 11px;
@@ -2364,12 +2366,20 @@ a:hover .instructor-card-two__social__icon {
 .course-card:hover .course-card__hover {
   transform: scaleY(1);
 }
+/* Hide hover state for course cards */
+.course-card__hover {
+  display: none !important;
+}
 .course-card__text {
   margin-bottom: 23px;
   text-transform: capitalize;
+  margin-top: 15px;
+  color: var(--eduhive-text, #666666);
+  line-height: 1.6;
 }
 .course-card__btn {
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 .course-card--two {
   padding: 0;
@@ -2524,8 +2534,9 @@ a:hover .instructor-card-two__social__icon {
 @media (min-width: 1200px) {
   .courses-one__container {
     max-width: 1275px;
-    margin: 0;
-    padding-left: 0;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (min-width: 1400px) {
@@ -3979,16 +3990,9 @@ a:hover .instructor-card-two__social__icon {
   color: var(--eduhive-white, #FFFFFF);
   line-height: 1.2;
 }
-.topbar__info li:hover {
-  color: var(--eduhive-base, #0066CC);
-}
-.topbar__info li a {
+.topbar__info li a,
+.topbar__info li span {
   color: inherit;
-  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
-  transition: all 500ms ease;
-}
-.topbar__info li a:hover {
-  background-size: 100% 1px;
 }
 .topbar__info__icon {
   position: relative;
@@ -4015,6 +4019,36 @@ a:hover .instructor-card-two__social__icon {
 }
 .topbar__social a:not(:last-child)::after {
   color: RGBA(var(--eduhive-border-color-rgb, 219, 216, 230), 0.2);
+}
+
+/*--------------------------------------------------------------
+# Google Maps Styles
+--------------------------------------------------------------*/
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 480px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 480px;
+}
+
+.gmap_iframe {
+  width: 100% !important;
+  height: 480px !important;
+}
+
+@media (max-width: 767px) {
+  .mapouter,
+  .gmap_canvas,
+  .gmap_iframe {
+    height: 400px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -4388,13 +4422,46 @@ a:hover .instructor-card-two__social__icon {
   position: relative;
   font-size: 16px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   color: var(--eduhive-black, #20104B);
   line-height: 1.25;
   font-weight: 500;
   text-transform: capitalize;
   transition: all 500ms ease;
   white-space: nowrap;
+}
+.main-menu .main-menu__list > li > a > span {
+  display: block;
+  line-height: 1.2;
+}
+.main-menu .main-menu__list > li > a > small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--eduhive-text, #7B7980);
+  line-height: 1.2;
+  margin-top: 2px;
+  text-transform: none;
+}
+.main-menu .main-menu__list > li:hover > a > small {
+  color: var(--eduhive-base, #0066CC);
+}
+.main-menu .main-menu__list li ul li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.main-menu .main-menu__list li ul li > a > span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--eduhive-text, #7B7980);
+  margin-top: 2px;
+  text-transform: none;
+}
+.main-menu .main-menu__list li ul li:hover > a > span {
+  color: var(--eduhive-white, #FFFFFF);
 }
 .main-menu .main-menu__list > li.current > a,
 .main-menu .main-menu__list > li:hover > a {
@@ -5696,10 +5763,11 @@ body.megamenu-popup-active .mobile-nav__content {
   }
 }
 .main-footer__top__inner {
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: center;
   gap: 57px;
+  flex-shrink: 0;
 }
 @media (max-width: 991px) {
   .main-footer__top__inner {
@@ -11742,6 +11810,16 @@ li:hover .contact-page__info__icon__inner {
 }
 .cta-one .eduhive-btn:hover .eduhive-btn__icon__inner {
   color: var(--eduhive-primary, #DC143C);
+}
+/* Specific styling for CTA Apply Now button - Red initially, Blue on hover */
+.cta-one__apply-btn {
+  background-color: var(--eduhive-primary, #DC143C) !important;
+}
+.cta-one__apply-btn::after {
+  background-color: var(--eduhive-base, #0066CC) !important;
+}
+.cta-one__apply-btn:hover .eduhive-btn__icon__inner {
+  color: var(--eduhive-base, #0066CC) !important;
 }
 .cta-one__image-one {
   max-width: 100%;
