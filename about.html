@@ -9,8 +9,9 @@
     <meta name="description" content="Learn about Corporate Commerce - Telangana's premier industry-integrated commerce institution. Discover our mission, values, and commitment to 60% practical learning, CA/CMA/CS integration, and 100% placement assistance." />
     <meta name="keywords" content="Corporate Commerce about, commerce college Hyderabad, industry-integrated commerce, practical commerce education, commerce college Telangana, commerce institution Hyderabad" />
     <meta name="author" content="Corporate Commerce" />
-    <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <!-- favicons Icons (primary: Director photo) -->
+    <link rel="icon" type="image/jpeg" href="assets/images/instructors/instructor-3-6.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/instructors/instructor-3-6.jpg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
@@ -36,6 +37,109 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/eduhive.css" />
+    <style>
+        /* Director card: image fills hexagon, centered (no clipping) */
+        .instructor-card-three--director .instructor-card-three__image__inner {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .instructor-card-three--director .instructor-card-three__image__inner img {
+            object-fit: cover;
+            object-position: center center;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        /* Chairman's Message section */
+        .chairman-message {
+            background: linear-gradient(160deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .chairman-message::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--eduhive-base, #0066CC), #0ea5e9);
+        }
+        .chairman-message__inner {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        .chairman-message__image-wrap {
+            flex: 0 0 340px;
+            max-width: 340px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .chairman-message__image-wrap img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+        }
+        .chairman-message__content {
+            flex: 1;
+            min-width: 280px;
+            padding: 2.5rem 2.5rem 2.5rem 1rem;
+        }
+        .chairman-message__tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: var(--eduhive-base, #0066CC);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .chairman-message__name {
+            font-family: var(--eduhive-font-heading, 'Cormorant', serif);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+        .chairman-message__designation {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        .chairman-message__text {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+        .chairman-message__text:last-of-type {
+            margin-bottom: 0;
+        }
+        @media (max-width: 991px) {
+            .chairman-message__image-wrap { flex: 0 0 100%; max-width: 100%; padding: 2rem 2rem 0; }
+            .chairman-message__image-wrap img { max-width: 260px; }
+            .chairman-message__content { padding: 1.5rem 2rem 2.5rem; }
+        }
+        @media (max-width: 575px) {
+            .chairman-message { padding: 2.5rem 0; }
+            .chairman-message__name { font-size: 1.5rem; }
+        }
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -62,13 +166,13 @@
                             <span class="topbar__info__icon">
                                 <i class="icon-telephone"></i>
                             </span>
-                            <span>94188 66666</span>
+                            <span>94188 66666 / 94189 66666</span>
                         </li>
                         <li>
                             <span class="topbar__info__icon">
                                 <i class="icon-location"></i>
                             </span>
-                            <span>H.No 8-3-318/11/31, Jayaprakash Nagar, Besides Saradhi Studio, Ameerpet, Hyderabad - 500073</span>
+                            <span>Ameerpet, Hyderabad</span>
                         </li>
                     </ul><!-- /.list-unstyled topbar__info -->
                 </div><!-- /.topbar__inner -->
@@ -98,8 +202,8 @@
                                             <small>MEC, CEC Programs</small>
                                         </a>
                                     <ul>
-                                        <li><a href="mec-professional.html">MEC Professional<span>Integrated with CA/CMA/CS</span></a></li>
-                                        <li><a href="cec-professional.html">CEC Professional<span>Integrated with CA/CMA/CS</span></a></li>
+                                        <li><a href="mec-professional.html">MEC Professional<span>CA/CMA/CS, CUET, IPMAT, CLAT</span></a></li>
+                                        <li><a href="cec-professional.html">CEC Professional<span>CA/CMA/CS, CUET, IPMAT, CLAT</span></a></li>
                                         <li><a href="junior-design-professional.html">Junior Design Professional<span>NIFT/NID/UCEED/CEED/NATA</span></a></li>
                                         <li><a href="mec-corporate.html">MEC Corporate<span>Practical Exposure</span></a></li>
                                         <li><a href="cec-corporate.html">CEC Corporate<span>Practical Exposure</span></a></li>
@@ -118,6 +222,30 @@
                                             <li><a href="bca.html">BCA<span>Bachelor of Computer Applications</span></a></li>
                                         </ul>
                                     </li>
+                                    <li class="dropdown">
+                                        <a href="professional-courses.html">
+                                            <span>Professional Academy</span>
+                                            <small>CA, CMA Courses</small>
+                                        </a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">CA</a>
+                                                <ul>
+                                                    <li><a href="ca-foundation.html">Foundation</a></li>
+                                                    <li><a href="ca-inter.html">Inter</a></li>
+                                                    <li><a href="ca-final.html">Final</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#">CMA</a>
+                                                <ul>
+                                                    <li><a href="cma-foundation.html">Foundation</a></li>
+                                                    <li><a href="cma-inter.html">Inter</a></li>
+                                                    <li><a href="cma-final.html">Final</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         <a href="contact.html">Contact</a>
                                     </li>
@@ -130,12 +258,6 @@
                             </div><!-- /.mobile-nav__toggler -->
                             <a href="https://ccge.in" target="_blank" class="main-header__btn eduhive-btn eduhive-btn--border" style="margin-right: 10px;">
                                 <span>Global Education</span>
-                                <span class="eduhive-btn__icon">
-                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                </span>
-                            </a><!-- /.main-header__btn eduhive-btn -->
-                            <a href="https://ccbs.in" target="_blank" class="main-header__btn eduhive-btn eduhive-btn--border">
-                                <span>Business School</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                 </span>
@@ -159,6 +281,24 @@
             <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
             <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
         </section><!-- /.page-header -->
+
+        <section class="chairman-message section-space">
+            <div class="container">
+                <div class="chairman-message__inner wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="00ms">
+                    <div class="chairman-message__image-wrap">
+                        <img src="assets/images/chairperson/geetha-ab.png" alt="CA. Geetha A B - Past Chairperson, SIRC of ICAI">
+                    </div>
+                    <div class="chairman-message__content">
+                        <p class="chairman-message__tag">Chairman’s Message</p>
+                        <h2 class="chairman-message__name">CA. GEETHA A B</h2>
+                        <p class="chairman-message__designation">Past Chairperson, SIRC of ICAI (2024-2025)</p>
+                        <p class="chairman-message__text">CA. Geetha A B is a Fellow Member of ICAI, practicing since 2003. She was the 73rd Chairperson of SIRC and the 2nd Woman Member to hold the position. A Graduate in Commerce, she holds Diploma in Information and Systems Audit (ICAI), is an Insolvency Professional (IIIP-ICAI), Registered Valuer (ICAI RVO), and an empanelled Independent Director and Social Auditor.</p>
+                        <p class="chairman-message__text">Elected to SIRC for two consecutive terms (2019-2025), she served as Treasurer (2020-2021), Vice-Chairperson (2023-2024), and Chairperson (2024-2025). She was Chairperson of Bengaluru Branch of SIRC (2017-2018) and is currently a co-opt member of the Insolvency &amp; Valuation Standards Board Committee of ICAI.</p>
+                        <p class="chairman-message__text">She has been awarded “Kadhamba Rathna” (2021) and Pakwan Realistic Awards 2024 in the Finance category, and introduced the Students’ Speakers Forum for CA students. Dedication, commitment, and service to society are at the heart of her leadership.</p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.chairman-message -->
 
         <section class="about-two section-space">
             <div class="container">
@@ -363,16 +503,6 @@
                             <div class="instructor-card-three__image">
                                 <div class="instructor-card-three__image__inner">
                                     <img src="assets/images/instructors/instructor-3-1.jpg" alt="Mr Chinna Masthan Yadav">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://linkedin.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Linkedin</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
                                 </div><!-- /.instructor-card-three__image__inner -->
                             </div><!-- /.instructor-card-three__image -->
                             <div class="instructor-card-three__identity">
@@ -386,16 +516,6 @@
                             <div class="instructor-card-three__image">
                                 <div class="instructor-card-three__image__inner">
                                     <img src="assets/images/instructors/instructor-3-2.jpg" alt="Malleswara Sarma">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://linkedin.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Linkedin</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
                                 </div><!-- /.instructor-card-three__image__inner -->
                             </div><!-- /.instructor-card-three__image -->
                             <div class="instructor-card-three__identity">
@@ -409,16 +529,6 @@
                             <div class="instructor-card-three__image">
                                 <div class="instructor-card-three__image__inner">
                                     <img src="assets/images/instructors/instructor-3-3.jpg" alt="Neel Kamal">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://linkedin.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Linkedin</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
                                 </div><!-- /.instructor-card-three__image__inner -->
                             </div><!-- /.instructor-card-three__image -->
                             <div class="instructor-card-three__identity">
@@ -432,21 +542,24 @@
                             <div class="instructor-card-three__image">
                                 <div class="instructor-card-three__image__inner">
                                     <img src="assets/images/instructors/instructor-3-5.jpg" alt="CA Sudhakara Reddy S">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://linkedin.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Linkedin</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
                                 </div><!-- /.instructor-card-three__image__inner -->
                             </div><!-- /.instructor-card-three__image -->
                             <div class="instructor-card-three__identity">
                                 <h3 class="instructor-card-three__name">CA Sudhakara Reddy S</h3><!-- /.instructor-card-three__name -->
                                 <p class="instructor-card-three__designation">FCA, BBM, M. Com, LLB, DISA</p><!-- /.instructor-card-three__designation -->
+                            </div><!-- /.instructor-card-three__identity -->
+                        </div><!-- /.instructor-card-three -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="instructor-card-three instructor-card-three--top-identity instructor-card-three--director wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="instructor-card-three__image">
+                                <div class="instructor-card-three__image__inner">
+                                    <img src="assets/images/instructors/instructor-3-6.png" alt="Balu Acharya">
+                                </div><!-- /.instructor-card-three__image__inner -->
+                            </div><!-- /.instructor-card-three__image -->
+                            <div class="instructor-card-three__identity">
+                                <h3 class="instructor-card-three__name">Balu Acharya</h3><!-- /.instructor-card-three__name -->
+                                <p class="instructor-card-three__designation">Director</p><!-- /.instructor-card-three__designation -->
                             </div><!-- /.instructor-card-three__identity -->
                         </div><!-- /.instructor-card-three -->
                     </div><!-- /.item -->
@@ -548,6 +661,13 @@
                         </div><!-- /.main-footer__social social-links -->
                     </div><!-- /.main-footer__top__inner -->
                 </div><!-- /.main-footer__top -->
+                <div class="footer-map-wrap">
+                    <h3 class="footer-map-wrap__title">Find Us</h3>
+                    <a href="https://www.google.com/maps/search/Ameerpet,+Hyderabad" target="_blank" rel="noopener noreferrer" class="footer-map-wrap__link" aria-label="Open Corporate Commerce location in Google Maps">Ameerpet, Hyderabad</a>
+                    <div class="footer-map-wrap__iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.2331699892!2d78.4744!3d17.4375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99dac93e350d%3A0xf9395874630a2a42!2sAmeerpet%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1633024800000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Corporate Commerce - Ameerpet, Hyderabad"></iframe>
+                    </div>
+                </div>
                 <div class="row gutter-y-40">
                     <div class="col-xl-3 col-lg-4 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="footer-widget footer-widget--about">
@@ -556,7 +676,7 @@
                             <ul class="footer-widget__info">
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-location"></i></span>
-                                    <span>H.No 8-3-318/11/31, Jayaprakash Nagar, Besides Saradhi Studio, Ameerpet, Hyderabad - 500073</span>
+                                    <span>Ameerpet, Hyderabad</span>
                                 </li>
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-email"></i></span>
@@ -564,7 +684,7 @@
                                 </li>
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-telephone"></i></span>
-                                    <span>94188 66666</span>
+                                    <span>94188 66666 / 94189 66666</span>
                                 </li>
                             </ul><!-- /.footer-widget__info -->
                         </div><!-- /.footer-widget -->
@@ -739,7 +859,7 @@
                 </li>
                 <li>
                     <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
-                    <span>94188 66666</span>
+                    <span>94188 66666 / 94189 66666</span>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__social social-links-two">

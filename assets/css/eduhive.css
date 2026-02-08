@@ -5799,6 +5799,40 @@ body.megamenu-popup-active .mobile-nav__content {
     align-items: flex-start;
   }
 }
+
+/* Footer social: proper spacing + brand colors */
+.main-footer__social.social-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.main-footer__social.social-links a::after {
+  content: none !important;
+  margin: 0 !important;
+}
+.main-footer__social.social-links a,
+.main-footer__social.social-links span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+.main-footer__social.social-links a:hover,
+.main-footer__social.social-links span:hover {
+  opacity: 0.85;
+  transform: scale(1.08);
+}
+.main-footer__social.social-links a:nth-child(1) { color: #1877F2; }
+.main-footer__social.social-links a:nth-child(2) { color: #000000; }
+.main-footer__social.social-links span:nth-child(3),
+.main-footer__social.social-links a:nth-child(3) { color: #0A66C2; }
+.main-footer__social.social-links span:nth-child(4),
+.main-footer__social.social-links a:nth-child(4) { color: #FF0000; }
+
 .main-footer__newsletter {
   width: 100%;
   max-width: 581px;
@@ -6124,6 +6158,38 @@ body.megamenu-popup-active .mobile-nav__content {
 .footer-widget__gallery__link:hover .footer-widget__gallery__icon {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Footer map widget */
+.footer-map-wrap {
+  margin-bottom: 2.5rem;
+}
+.footer-map-wrap__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--eduhive-black2, #151540);
+  margin-bottom: 0.35rem;
+}
+.footer-map-wrap__link {
+  font-size: 0.875rem;
+  color: var(--eduhive-base, #0066CC);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+.footer-map-wrap__link:hover {
+  text-decoration: underline;
+  color: var(--eduhive-base, #0066CC);
+}
+.footer-map-wrap__iframe {
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--eduhive-white2, #EDEAF4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.footer-map-wrap__iframe iframe {
+  display: block;
 }
 
 /*--------------------------------------------------------------

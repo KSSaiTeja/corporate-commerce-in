@@ -37,8 +37,9 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://corporatecommerce.in/" />
     
-    <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <!-- favicons Icons (primary: Director photo) -->
+    <link rel="icon" type="image/jpeg" href="assets/images/instructors/instructor-3-6.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/instructors/instructor-3-6.jpg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
@@ -55,15 +56,13 @@
       "description": "Telangana's premier industry-integrated commerce institution offering Junior College and Degree College programs with 60% practical learning, CA/CMA/CS integration, and 100% placement assistance.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "H.No 8-3-318/11/31, Jayaprakash Nagar, Besides Saradhi Studio, Ameerpet",
-        "addressLocality": "Hyderabad",
-        "postalCode": "500073",
+        "addressLocality": "Ameerpet, Hyderabad",
         "addressRegion": "Telangana",
         "addressCountry": "IN"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-9418866666",
+        "telephone": "+91-9418866666, +91-9418966666",
         "contactType": "Admissions",
         "email": "info@corporatecommerce.in",
         "areaServed": "IN",
@@ -163,6 +162,21 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/eduhive.css" />
+    <style>
+        .course-category__card__desc {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-top: 10px;
+            margin-bottom: 0;
+            color: inherit;
+            opacity: 0.9;
+        }
+        /* Hover: keep text readable on pillar cards */
+        .course-category__card:hover .course-category__card__desc {
+            color: #fff !important;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -190,13 +204,13 @@
                                 <span class="topbar__info__icon">
                                     <i class="icon-telephone"></i>
                                 </span>
-                                <span>94188 66666</span>
+                                <span>94188 66666 / 94189 66666</span>
                             </li>
                             <li>
                                 <span class="topbar__info__icon">
                                     <i class="icon-location"></i>
                                 </span>
-                                <span>H.No 8-3-318/11/31, Jayaprakash Nagar, Besides Saradhi Studio, Ameerpet, Hyderabad - 500073</span>
+                                <span>Ameerpet, Hyderabad</span>
                             </li>
                         </ul><!-- /.list-unstyled topbar__info -->
                     </div><!-- /.topbar__inner -->
@@ -226,8 +240,8 @@
                                             <small>MEC, CEC Programs</small>
                                         </a>
                                     <ul>
-                                        <li><a href="mec-professional.html">MEC Professional<span>Integrated with CA/CMA/CS</span></a></li>
-                                        <li><a href="cec-professional.html">CEC Professional<span>Integrated with CA/CMA/CS</span></a></li>
+                                        <li><a href="mec-professional.html">MEC Professional<span>CA/CMA/CS, CUET, IPMAT, CLAT</span></a></li>
+                                        <li><a href="cec-professional.html">CEC Professional<span>CA/CMA/CS, CUET, IPMAT, CLAT</span></a></li>
                                         <li><a href="junior-design-professional.html">Junior Design Professional<span>NIFT/NID/UCEED/CEED/NATA</span></a></li>
                                         <li><a href="mec-corporate.html">MEC Corporate<span>Practical Exposure</span></a></li>
                                         <li><a href="cec-corporate.html">CEC Corporate<span>Practical Exposure</span></a></li>
@@ -246,6 +260,30 @@
                                             <li><a href="bca.html">BCA<span>Bachelor of Computer Applications</span></a></li>
                                         </ul>
                                     </li>
+                                    <li class="dropdown">
+                                        <a href="professional-courses.html">
+                                            <span>Professional Academy</span>
+                                            <small>CA, CMA Courses</small>
+                                        </a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">CA</a>
+                                                <ul>
+                                                    <li><a href="ca-foundation.html">Foundation</a></li>
+                                                    <li><a href="ca-inter.html">Inter</a></li>
+                                                    <li><a href="ca-final.html">Final</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#">CMA</a>
+                                                <ul>
+                                                    <li><a href="cma-foundation.html">Foundation</a></li>
+                                                    <li><a href="cma-inter.html">Inter</a></li>
+                                                    <li><a href="cma-final.html">Final</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         <a href="contact.html">Contact</a>
                                     </li>
@@ -258,12 +296,6 @@
                             </div><!-- /.mobile-nav__toggler -->
                             <a href="https://ccge.in" target="_blank" class="main-header__btn eduhive-btn eduhive-btn--border">
                                 <span>Global Education</span>
-                                <span class="eduhive-btn__icon">
-                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                </span>
-                            </a><!-- /.main-header__btn eduhive-btn -->
-                            <a href="https://ccbs.in" target="_blank" class="main-header__btn eduhive-btn eduhive-btn--border">
-                                <span>Business School</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                 </span>
@@ -281,13 +313,13 @@
                             <div class="main-slider-one__col-content">
                                 <div class="main-slider-one__content">
                                     <img src="assets/images/shapes/main-slider-shape-1-1.png" alt="shape" class="main-slider-one__content__shape slider-image">
-                                    <p class="main-slider-one__sub-title">Connect to Corporate</p><!-- /.sub-title -->
                                     <h2 class="main-slider-one__title">
-                                        <span class="main-slider-one__title__text">Corporate</span> <span class="main-slider-one__title__shape">Commerce</span> <br>
-                                        Learn Accounting, Live Corporate
+                                        <span class="main-slider-one__title__text">Corporate</span> <span class="main-slider-one__title__shape">Commerce</span>
                                     </h2><!-- /.title -->
+                                    <p class="main-slider-one__hero-line" style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Learn Accounting, Live Corporate →</p>
+                                    <p class="main-slider-one__hero-highlight" style="font-size: 1.75rem; font-weight: 700; margin-top: 0.35rem; line-height: 1.3; color: var(--eduhive-base, #0066CC);">60% Practical, 40% theory = 100% Job.</p>
                                     <div class="main-slider-one__description">
-                                        <p class="main-slider-one__text">60% Practical + 40% Theory = 100% Job. Industry-integrated commerce programs designed to bridge the gap between academic learning and corporate skills.</p><!-- /.text -->
+                                        <p class="main-slider-one__text">Industry-integrated commerce programs designed to bridge the gap between academic learning and corporate skills.</p><!-- /.text -->
                                     </div><!-- /.description -->
                                     <div class="main-slider-one__button">
                                         <a href="courses.html" class="main-slider-one__btn-1 eduhive-btn">
@@ -365,7 +397,8 @@
                                         <i class="icon-briefcase"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">60% Practical Learning</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">60% Practical Learning Framework</h4>
+                                <p class="course-category__card__desc">Hands-on training through real business tools, simulations, workshops, and case-based sessions to ensure industry-ready skills from day one.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -379,7 +412,8 @@
                                         <i class="icon-art-studies"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">40% Strong Theory</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">40% Strong Theoretical Foundation</h4>
+                                <p class="course-category__card__desc">Well-structured academic learning that builds deep conceptual clarity essential for commerce and finance careers.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -393,7 +427,8 @@
                                         <i class="icon-setting"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Practical Training Tools</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Practical Training in Accounting & Business Tools</h4>
+                                <p class="course-category__card__desc">Training in Tally, GST, Excel, Financial Modelling, Accounting Software, Business Analytics Tools and more for real-world competence.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -407,7 +442,8 @@
                                         <i class="icon-self-confidence"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Global Integration</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Global Professional Integration</h4>
+                                <p class="course-category__card__desc">Seamless pathways for CA, CMA (India), ACCA, US CMA, UK/US Taxation with expert faculty and structured mentoring.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -421,7 +457,8 @@
                                         <i class="icon-healthcare"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Industry Interface</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Industry-Academia Interface</h4>
+                                <p class="course-category__card__desc">Regular interactions with finance professionals, CAs, CMAs, ACCA members, and industry experts for exposure and guidance.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -435,7 +472,8 @@
                                         <i class="icon-coding-1"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Soft Skills Lab</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Communication & Soft Skills</h4>
+                                <p class="course-category__card__desc">Dedicated training to strengthen communication, personality, and corporate readiness.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -449,7 +487,8 @@
                                         <i class="icon-clapperboard"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Mentorship & Guidance</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Mentorship & Career Guidance</h4>
+                                <p class="course-category__card__desc">One-to-one mentoring for academic planning, professional qualification preparation, and career mapping.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -463,11 +502,12 @@
                                         <i class="icon-megaphone"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">100% Placement</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">100% Placement Assistance</h4>
+                                <p class="course-category__card__desc">A strong placement cell connecting students with top companies, audit firms, finance firms, KPOs, and MNCs.</p>
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
-                </div><!-- /.row gutter-y-30 -->
+                    </div><!-- /.row gutter-y-30 -->
             </div><!-- /.container -->
             <div class="course-category__shape-one"></div><!-- /.course-category__shape-one -->
             <div class="course-category__shape-two"></div><!-- /.course-category__shape-two -->
@@ -938,6 +978,123 @@
             </div><!-- /.courses-one__container container -->
             <img src="assets/images/shapes/courses-shape-1-1.png" alt="shape" class="courses-one__shape">
         </section><!-- /.courses-one section-space-top2 -->
+
+        <section class="courses-one section-space" id="professional-academy">
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h6 class="sec-title__tagline">professional academy</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title"><span>CA &amp; CMA</span> <span class="sec-title__title__shape">Professional</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
+                    <p class="sec-title__text"><a href="professional-courses.html">View overview</a> – Foundation, Inter &amp; Final for both CA and CMA</p>
+                </div><!-- /.sec-title -->
+            </div><!-- /.container -->
+            <div class="courses-one__container container">
+                <div class="row gutter-y-30">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">CA</div>
+                                    <div class="course-card__duration"><span class="course-card__duration__icon"><i class="icon-clock"></i></span>Level 1</div>
+                                </div>
+                                <h3 class="course-card__title"><a href="ca-foundation.html">CA Foundation</a></h3>
+                                <p class="course-card__text">4 papers: Accounting, Business Laws, Quantitative Aptitude, Business Economics. Eligibility: After Intermediate (after 10th).</p>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons"><span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>400 Marks</div>
+                                    <div class="course-card__students"><span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>Expert Faculty</div>
+                                </div>
+                                <a href="ca-foundation.html" class="course-card__btn eduhive-btn eduhive-btn--border"><span>Learn More</span><span class="eduhive-btn__icon"><span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">CA</div>
+                                    <div class="course-card__duration"><span class="course-card__duration__icon"><i class="icon-clock"></i></span>Level 2</div>
+                                </div>
+                                <h3 class="course-card__title"><a href="ca-inter.html">CA Inter</a></h3>
+                                <p class="course-card__text">Group 1 &amp; 2: Advanced Accounting, Laws, Taxation, Cost &amp; Management Accounting, Auditing, Financial Management &amp; Strategic Management.</p>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons"><span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>6 Papers</div>
+                                    <div class="course-card__students"><span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>Exam-Focused</div>
+                                </div>
+                                <a href="ca-inter.html" class="course-card__btn eduhive-btn eduhive-btn--border"><span>Learn More</span><span class="eduhive-btn__icon"><span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">CA</div>
+                                    <div class="course-card__duration"><span class="course-card__duration__icon"><i class="icon-clock"></i></span>Level 3</div>
+                                </div>
+                                <h3 class="course-card__title"><a href="ca-final.html">CA Final</a></h3>
+                                <p class="course-card__text">Group 1 &amp; 2: Financial Reporting, Strategic Financial Management, Advanced Auditing, Corporate &amp; Economic Laws, Optional papers.</p>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons"><span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>6 Papers</div>
+                                    <div class="course-card__students"><span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>Articleship Ready</div>
+                                </div>
+                                <a href="ca-final.html" class="course-card__btn eduhive-btn eduhive-btn--border"><span>Learn More</span><span class="eduhive-btn__icon"><span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">CMA</div>
+                                    <div class="course-card__duration"><span class="course-card__duration__icon"><i class="icon-clock"></i></span>Level 1</div>
+                                </div>
+                                <h3 class="course-card__title"><a href="cma-foundation.html">CMA Foundation</a></h3>
+                                <p class="course-card__text">4 papers: Business Laws &amp; Communication, Financial &amp; Cost Accounting, Business Mathematics &amp; Statistics, Business Economics &amp; Management.</p>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons"><span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>400 Marks</div>
+                                    <div class="course-card__students"><span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>Expert Faculty</div>
+                                </div>
+                                <a href="cma-foundation.html" class="course-card__btn eduhive-btn eduhive-btn--border"><span>Learn More</span><span class="eduhive-btn__icon"><span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">CMA</div>
+                                    <div class="course-card__duration"><span class="course-card__duration__icon"><i class="icon-clock"></i></span>Level 2</div>
+                                </div>
+                                <h3 class="course-card__title"><a href="cma-inter.html">CMA Inter</a></h3>
+                                <p class="course-card__text">Group 1 &amp; 2: Financial Accounting, Laws &amp; Ethics, Direct Taxation, Cost Accounting, Operations &amp; Strategic Management, Indirect Taxation, Company Accounts &amp; Audit.</p>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons"><span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>8 Papers</div>
+                                    <div class="course-card__students"><span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>Exam-Focused</div>
+                                </div>
+                                <a href="cma-inter.html" class="course-card__btn eduhive-btn eduhive-btn--border"><span>Learn More</span><span class="eduhive-btn__icon"><span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">CMA</div>
+                                    <div class="course-card__duration"><span class="course-card__duration__icon"><i class="icon-clock"></i></span>Level 3</div>
+                                </div>
+                                <h3 class="course-card__title"><a href="cma-final.html">CMA Final</a></h3>
+                                <p class="course-card__text">Group 3 &amp; 4: Corporate &amp; Economic Laws, Strategic Financial Management, Direct Tax &amp; International Taxation, Strategic Cost Management, Audit, Elective.</p>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons"><span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>8 Papers</div>
+                                    <div class="course-card__students"><span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>Articleship Ready</div>
+                                </div>
+                                <a href="cma-final.html" class="course-card__btn eduhive-btn eduhive-btn--border"><span>Learn More</span><span class="eduhive-btn__icon"><span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.courses-one__container container -->
+            <img src="assets/images/shapes/courses-shape-1-1.png" alt="shape" class="courses-one__shape">
+        </section><!-- /.courses-one #professional-academy -->
 
         <section class="funfact-one section-space-bottom funfact-one--home">
             <div class="funfact-one__inner">
@@ -1456,6 +1613,13 @@
                         </div><!-- /.main-footer__social social-links -->
                     </div><!-- /.main-footer__top__inner -->
                 </div><!-- /.main-footer__top -->
+                <div class="footer-map-wrap">
+                    <h3 class="footer-map-wrap__title">Find Us</h3>
+                    <a href="https://www.google.com/maps/search/Ameerpet,+Hyderabad" target="_blank" rel="noopener noreferrer" class="footer-map-wrap__link" aria-label="Open Corporate Commerce location in Google Maps">Ameerpet, Hyderabad</a>
+                    <div class="footer-map-wrap__iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.2331699892!2d78.4744!3d17.4375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99dac93e350d%3A0xf9395874630a2a42!2sAmeerpet%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1633024800000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Corporate Commerce - Ameerpet, Hyderabad"></iframe>
+                    </div>
+                </div>
                 <div class="row gutter-y-40">
                     <div class="col-xl-3 col-lg-4 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="footer-widget footer-widget--about">
@@ -1464,7 +1628,7 @@
                             <ul class="footer-widget__info">
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-location"></i></span>
-                                    <span>H.No 8-3-318/11/31, Jayaprakash Nagar, Besides Saradhi Studio, Ameerpet, Hyderabad - 500073</span>
+                                    <span>Ameerpet, Hyderabad</span>
                                 </li>
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-email"></i></span>
@@ -1472,7 +1636,7 @@
                                 </li>
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-telephone"></i></span>
-                                    <span>94188 66666</span>
+                                    <span>94188 66666 / 94189 66666</span>
                                 </li>
                             </ul><!-- /.footer-widget__info -->
                         </div><!-- /.footer-widget -->
@@ -1647,7 +1811,7 @@
                 </li>
                 <li>
                     <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
-                    <span>94188 66666</span>
+                    <span>94188 66666 / 94189 66666</span>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__social social-links-two">
