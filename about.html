@@ -38,19 +38,29 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/eduhive.css" />
     <style>
-        /* Director card: image fills hexagon, centered (no clipping) */
+        /* Geetha & Balu founder cards: match Chinna – no dark overlay, image fills hexagon, no clipping */
+        .instructor-card-three--geetha .instructor-card-three__image__inner,
         .instructor-card-three--director .instructor-card-three__image__inner {
-            position: absolute;
-            inset: 0;
-            width: 100%;
             height: 100%;
+            width: 100%;
         }
-        .instructor-card-three--director .instructor-card-three__image__inner img {
-            object-fit: cover;
-            object-position: center center;
+        .instructor-card-three--geetha .instructor-card-three__image__inner::after,
+        .instructor-card-three--director .instructor-card-three__image__inner::after {
+            display: none !important;
+        }
+        .instructor-card-three--geetha .instructor-card-three__image__inner img {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: cover;
+            object-position: center 22%;
+        }
+        .instructor-card-three--director .instructor-card-three__image__inner img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center 38%;
         }
         /* Chairman's Message section */
         .chairman-message {
@@ -286,15 +296,16 @@
             <div class="container">
                 <div class="chairman-message__inner wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="00ms">
                     <div class="chairman-message__image-wrap">
-                        <img src="assets/images/chairperson/geetha-ab.png" alt="CA. Geetha A B - Past Chairperson, SIRC of ICAI">
+                        <img src="assets/images/instructors/instructor-3-1.jpg" alt="Chairman, Corporate Commerce College">
                     </div>
                     <div class="chairman-message__content">
                         <p class="chairman-message__tag">Chairman’s Message</p>
-                        <h2 class="chairman-message__name">CA. GEETHA A B</h2>
-                        <p class="chairman-message__designation">Past Chairperson, SIRC of ICAI (2024-2025)</p>
-                        <p class="chairman-message__text">CA. Geetha A B is a Fellow Member of ICAI, practicing since 2003. She was the 73rd Chairperson of SIRC and the 2nd Woman Member to hold the position. A Graduate in Commerce, she holds Diploma in Information and Systems Audit (ICAI), is an Insolvency Professional (IIIP-ICAI), Registered Valuer (ICAI RVO), and an empanelled Independent Director and Social Auditor.</p>
-                        <p class="chairman-message__text">Elected to SIRC for two consecutive terms (2019-2025), she served as Treasurer (2020-2021), Vice-Chairperson (2023-2024), and Chairperson (2024-2025). She was Chairperson of Bengaluru Branch of SIRC (2017-2018) and is currently a co-opt member of the Insolvency &amp; Valuation Standards Board Committee of ICAI.</p>
-                        <p class="chairman-message__text">She has been awarded “Kadhamba Rathna” (2021) and Pakwan Realistic Awards 2024 in the Finance category, and introduced the Students’ Speakers Forum for CA students. Dedication, commitment, and service to society are at the heart of her leadership.</p>
+                        <h2 class="chairman-message__name">Chinna Masthan Yadav</h2>
+                        <p class="chairman-message__designation">FCA, LLM, M.Com, MSc. (Psychology)</p>
+                        <p class="chairman-message__text">In today’s rapidly evolving global economy, the role of commerce and finance professionals has never been more significant. At Corporate Commerce College, our mission is to prepare students for the demands of the present and the opportunities of the future. We are committed to shaping individuals who are capable, confident, and globally competitive.</p>
+                        <p class="chairman-message__text">Commerce offers pathways into Finance, Accounting, Auditing, Taxation, Banking, Consulting, Analytics, and Entrepreneurship. We offer a comprehensive blend of programmes including CA, CMA, CS, B.Com, BBA, ACCA, US CMA, and UK &amp; US Taxation — ensuring students gain an edge in both domestic and global markets.</p>
+                        <p class="chairman-message__text">Our academic framework balances conceptual learning with professional preparation through practical exposure, case-based learning, technology-driven pedagogy, and mentoring by industry professionals. This strengthens analytical ability, employability, and leadership.</p>
+                        <p class="chairman-message__text">We believe excellence comes through disciplined effort, guided direction, and continuous improvement. We welcome aspiring learners to an institution where education is a transformative journey, and remain dedicated to nurturing the next generation of commerce professionals who will shape the financial future of our nation and the world.</p>
                     </div>
                 </div>
             </div>
@@ -551,10 +562,23 @@
                         </div><!-- /.instructor-card-three -->
                     </div><!-- /.item -->
                     <div class="item">
+                        <div class="instructor-card-three instructor-card-three--top-identity instructor-card-three--geetha wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="instructor-card-three__image">
+                                <div class="instructor-card-three__image__inner">
+                                    <img src="assets/images/chairperson/geetha-ab.png" alt="CA. Geetha A B">
+                                </div><!-- /.instructor-card-three__image__inner -->
+                            </div><!-- /.instructor-card-three__image -->
+                            <div class="instructor-card-three__identity">
+                                <h3 class="instructor-card-three__name">CA. Geetha A B</h3><!-- /.instructor-card-three__name -->
+                                <p class="instructor-card-three__designation">Past Chairperson, SIRC of ICAI (2024-2025)</p><!-- /.instructor-card-three__designation -->
+                            </div><!-- /.instructor-card-three__identity -->
+                        </div><!-- /.instructor-card-three -->
+                    </div><!-- /.item -->
+                    <div class="item">
                         <div class="instructor-card-three instructor-card-three--top-identity instructor-card-three--director wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                             <div class="instructor-card-three__image">
                                 <div class="instructor-card-three__image__inner">
-                                    <img src="assets/images/instructors/instructor-3-6.png" alt="Balu Acharya">
+                                    <img src="assets/images/instructors/Balu%20Acharya.png" alt="Balu Acharya">
                                 </div><!-- /.instructor-card-three__image__inner -->
                             </div><!-- /.instructor-card-three__image -->
                             <div class="instructor-card-three__identity">
